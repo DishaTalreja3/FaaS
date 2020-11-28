@@ -1,0 +1,94 @@
+<!-- This HTML file creates the form and asks the user for input -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+<head>
+    <title> Functions as a Service </title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style type="text/css">
+body {
+    background-color: #5c4084;
+    padding: 50px;
+  }
+  
+  .container {
+    padding: 40px 80px 15px 80px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 800px;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+  .heading h1 {
+    background: -webkit-linear-gradient(#fff, #999);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin: 0 0 5px 0;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #fff;
+  }
+  .heading h4 {
+    color: #a990cc;
+    text-align: center;
+    margin: 0 0 35px 0;
+    font-weight: 400;
+    font-size: 24px;
+  }
+  
+  .btn {
+    outline: none !important;
+  }
+  
+  .btn.btn-primary {
+    background-color: #5c4084;
+    border-color: #5c4084;
+    outline: none;
+  }
+  .btn.btn-primary:hover {
+    background-color: #442f62;
+    border-color: #442f62;
+  }
+  .btn.btn-primary:active, .btn.btn-primary:focus {
+    background-color: #684895;
+    border-color: #684895;
+  }
+  .btn.btn-primary .fa {
+    padding-right: 4px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+</style>
+
+</head>
+
+<body>
+    <div class="heading">
+		<h1>Frequency Check</h1>
+		<h4>Please enter the Input URL</h4>
+	  </div>
+	  <div class = "container">
+<form name = "addform" action="https://us-central1-serverless-functions-296916.cloudfunctions.net/frequency/" method="POST">
+<!-- <p> Please paste the input URL: <input type="text" name = "url"/></p> -->
+<div class="form-group">
+	<input type="text" name="url" class="form-control" placeholder="Enter the URL" />
+</div>
+<div class="form-group">
+  <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-block" @click="setFocus()">Get Output</button>
+</div>
+<!-- <input type="submit" name="submit" value="Submit"><br> -->
+<br>
+</form>
+</div>
+
+
+</body>
+</html>
